@@ -1,0 +1,700 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>തോമ്മാശ്ലീഹാ ഭാരതമണ്ണിലേക്ക്</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;600;700&family=Noto+Serif+Malayalam:wght@600;800&display=swap">
+<style>
+:root{
+  /* Layout: deep-maroon ground, gold journey track on top, one parchment scroll as the play area, team scores underneath. */
+  --maroon-950:#2a0911; --maroon-900:#3d0f1a; --maroon-800:#55141f; --maroon-700:#6e1727;
+  --gold-500:#d4a53a; --gold-300:#ecd08a; --gold-700:#9c7424;
+  --parch-100:#fbf3df; --parch-200:#f3e4bd; --parch-300:#e6cf97;
+  --ink:#34140f; --ink-soft:#6a4535;
+  --ok:#2c7a4b; --ok-bg:#d9efdc; --bad:#a8271f; --bad-bg:#f7d9d4;
+  --font-display:'Noto Serif Malayalam','Manjari',serif;
+  --font-body:'Noto Sans Malayalam','Manjari',system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  margin:0;background:var(--maroon-900);color:var(--parch-100);
+  font-family:var(--font-body);font-size:18px;line-height:1.65;
+  padding-block:16px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  background-image:radial-gradient(circle at 50% -10%,var(--maroon-700) 0,var(--maroon-900) 55%);
+  background-attachment:fixed;
+}
+.wrap{max-width:980px;margin:0 auto;display:grid;gap:18px;min-width:0}
+h1,h2,h3,p{margin:0}
+.top{padding-top:4px}
+.eyebrow{font-size:14px;letter-spacing:.06em;color:var(--gold-300);font-weight:600}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,5vw,42px);line-height:1.3;color:var(--gold-300);text-wrap:balance}
+
+/* journey */
+.jr{list-style:none;margin:0;padding:30px 2px 0;display:flex}
+.jr li{flex:1;position:relative;display:flex;justify-content:center;min-width:0}
+.jr li::before{content:"";position:absolute;top:calc(30px + 13px);left:-50%;right:50%;height:3px;background:var(--maroon-700)}
+.jr li:first-child::before{display:none}
+.jr li.done::before,.jr li.cur::before{background:var(--gold-500)}
+.nd{position:relative;z-index:1;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;border:2px solid var(--maroon-700);background:var(--maroon-900);color:var(--gold-300)}
+.jr li.done .nd{background:var(--gold-700);border-color:var(--gold-500);color:var(--parch-100)}
+.jr li.cur .nd{background:var(--gold-300);border-color:var(--gold-300);color:var(--maroon-900);box-shadow:0 0 0 4px rgba(236,208,138,.25)}
+.ship{position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:38px;color:var(--gold-300);z-index:2}
+.ship svg{display:block;width:100%;height:auto}
+
+/* stage */
+.scroll{
+  position:relative;background:linear-gradient(180deg,var(--parch-100),var(--parch-200));color:var(--ink);
+  border-radius:12px;padding:28px 24px 26px;border:3px solid var(--gold-500);
+  box-shadow:0 0 0 1px var(--maroon-950),0 14px 36px rgba(0,0,0,.35),inset 0 0 0 5px var(--parch-100),inset 0 0 0 6px var(--gold-700);
+  min-width:0;
+}
+.lh{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:16px}
+.lh h2{font-family:var(--font-display);font-weight:800;font-size:clamp(22px,4vw,30px);line-height:1.35;color:var(--maroon-800);flex:1 1 220px;text-wrap:balance}
+.chip{display:inline-block;padding:2px 12px;border-radius:999px;background:var(--maroon-800);color:var(--gold-300);font-size:14px;font-weight:600;white-space:nowrap}
+.chip.pg{background:var(--parch-300);color:var(--maroon-800);border:1px solid var(--gold-700)}
+.turn{display:inline-flex;align-items:center;gap:8px;background:var(--gold-300);color:var(--maroon-900);border-radius:999px;padding:3px 16px;font-weight:700;font-size:16px;margin-bottom:14px}
+.q{font-size:clamp(20px,3.4vw,26px);font-weight:600;line-height:1.55;margin-bottom:18px;color:var(--ink);text-wrap:pretty}
+.pts{font-weight:700;color:var(--ok)}
+.opts{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+@media (max-width:640px){.opts{grid-template-columns:1fr}.scroll{padding:22px 16px 22px}}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;font:inherit;font-size:19px;line-height:1.45;padding:12px 14px;border-radius:10px;border:2px solid var(--gold-700);background:var(--parch-100);color:var(--ink);cursor:pointer;min-width:0}
+.opt:hover:not(:disabled){background:#fff;border-color:var(--maroon-700)}
+.opt:disabled{cursor:default}
+.opt .ltr{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--maroon-800);color:var(--gold-300);font-size:14px;font-weight:700}
+.opt span:last-child{min-width:0;overflow-wrap:anywhere}
+.opt.ok{background:var(--ok-bg);border-color:var(--ok)}
+.opt.bad{background:var(--bad-bg);border-color:var(--bad)}
+.opt.reveal{background:var(--ok-bg);border-color:var(--ok);border-style:dashed}
+.btn{font:inherit;font-weight:700;font-size:18px;padding:10px 22px;border-radius:10px;cursor:pointer;border:2px solid var(--gold-500);background:var(--maroon-800);color:var(--gold-300)}
+.btn:hover{background:var(--maroon-700)}
+.btn.gold{background:var(--gold-500);color:var(--maroon-950);border-color:var(--gold-700)}
+.btn.gold:hover{background:var(--gold-300)}
+.btn.ghost{background:transparent;color:var(--maroon-800);border-color:var(--maroon-800)}
+.btn.ghost:hover{background:var(--parch-300)}
+.btn.sm{font-size:15px;padding:4px 12px}
+.btn:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible{outline:3px solid var(--maroon-700);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}
+.msg{margin-top:16px;padding:12px 16px;border-radius:10px;font-size:18px}
+.msg.good{background:var(--ok-bg);border:1px solid var(--ok)}
+.msg.warn{background:var(--bad-bg);border:1px solid var(--bad)}
+.ref{margin-top:10px;font-size:16px;color:var(--ink-soft)}
+.ref b{color:var(--maroon-800)}
+.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
+/* setup */
+.setup p.lead{font-size:20px;margin-bottom:18px}
+.cnt{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 18px}
+.cnt button{width:48px;height:48px;border-radius:50%;font:inherit;font-weight:700;font-size:20px;cursor:pointer;border:2px solid var(--maroon-800);background:var(--parch-100);color:var(--maroon-800)}
+.cnt button.on{background:var(--maroon-800);color:var(--gold-300)}
+.names{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:6px}
+.names label{display:grid;gap:4px;font-size:15px;font-weight:600;color:var(--ink-soft)}
+.names input{font:inherit;font-size:18px;padding:8px 12px;border-radius:8px;border:2px solid var(--gold-700);background:#fff;color:var(--ink);min-width:0;width:100%}
+.how{margin:18px 0 0;padding:14px 18px;border-radius:10px;background:var(--parch-300);font-size:16px;line-height:1.7}
+.how b{color:var(--maroon-800)}
+
+/* player */
+.player{background:var(--maroon-900);color:var(--parch-100);border-radius:12px;padding:20px 18px 14px;border:2px solid var(--gold-700)}
+.pv{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;min-height:170px}
+@media (max-width:560px){.pv{grid-template-columns:1fr;justify-items:center;text-align:center}}
+.art{width:150px;color:var(--gold-300)}
+.art svg{display:block;width:100%;height:auto}
+.cap{font-family:var(--font-display);font-weight:600;font-size:clamp(20px,3.4vw,27px);line-height:1.6;white-space:pre-line;min-width:0}
+.cap.in{animation:fadein .6s}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.segs{display:flex;gap:5px;margin:14px 0 10px}
+.seg{flex:1;height:5px;background:var(--maroon-700);border-radius:3px;overflow:hidden}
+.seg i{display:block;height:100%;width:0;background:var(--gold-300)}
+.ctl{display:flex;flex-wrap:wrap;gap:8px}
+.ctl .btn{font-size:15px;padding:4px 14px;background:var(--maroon-800)}
+.note{margin-top:12px;font-size:15px;color:var(--ink-soft)}
+
+/* help */
+.help{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media (max-width:640px){.help{grid-template-columns:1fr}}
+.help .btn{padding:18px 14px;font-size:19px;text-align:center}
+.pgbig{text-align:center;padding:22px 12px;border-radius:12px;background:var(--parch-300);border:2px dashed var(--gold-700)}
+.pgbig .no{font-family:var(--font-display);font-weight:800;font-size:clamp(40px,10vw,72px);line-height:1.2;color:var(--maroon-800)}
+
+/* match / order */
+.mt{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+@media (max-width:560px){.mt{grid-template-columns:1fr}}
+.mt .col{display:grid;gap:10px;align-content:start}
+.mt .opt.sel{border-color:var(--maroon-700);background:#fff;box-shadow:0 0 0 3px var(--gold-300)}
+.mt .opt.dn{background:var(--ok-bg);border-color:var(--ok)}
+.ord{display:grid;gap:10px}
+.ord .opt .ltr.n{background:var(--ok);color:#fff}
+
+/* tasks */
+.tk{border:1px solid var(--gold-700);border-radius:10px;padding:14px 16px;background:var(--parch-100);display:grid;gap:10px;margin-bottom:12px}
+.tk h3{font-family:var(--font-display);font-weight:800;font-size:21px;color:var(--maroon-800);line-height:1.4}
+.tk .d{font-size:17px}
+.tkrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.tm-t{font-variant-numeric:tabular-nums;font-weight:700;font-size:22px;color:var(--maroon-800);min-width:64px}
+.aw{display:flex;flex-wrap:wrap;gap:8px}
+.aw .a{display:flex;align-items:center;gap:6px;padding:4px 8px 4px 12px;border:1px solid var(--gold-700);border-radius:999px;background:var(--parch-200);font-size:16px}
+.aw .a b{min-width:34px;text-align:center;font-variant-numeric:tabular-nums}
+.aw .btn{width:30px;height:30px;padding:0;border-radius:50%;font-size:17px;line-height:1}
+
+/* results */
+.rank{display:grid;gap:10px;margin:6px 0 18px}
+.rk{display:flex;align-items:center;gap:14px;padding:10px 16px;border-radius:10px;border:1px solid var(--gold-700);background:var(--parch-100)}
+.rk.first{background:var(--gold-300);border:2px solid var(--maroon-800)}
+.rk .p{font-family:var(--font-display);font-weight:800;font-size:26px;color:var(--maroon-800);width:34px;text-align:center}
+.rk .n{flex:1;min-width:0;font-weight:700;font-size:20px;overflow-wrap:anywhere}
+.rk .s{font-weight:800;font-size:24px;font-variant-numeric:tabular-nums;color:var(--maroon-800)}
+.bd{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.b{padding:14px 16px;border-radius:10px;background:var(--maroon-800);color:var(--parch-100);border:2px solid var(--gold-500)}
+.b h3{font-family:var(--font-display);font-size:22px;color:var(--gold-300);line-height:1.4}
+.b .w{font-weight:700;margin-top:2px;overflow-wrap:anywhere}
+.b .e{font-size:14px;color:var(--parch-300);margin-top:2px}
+
+/* board */
+.board{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.tm{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:var(--maroon-800);border:2px solid var(--maroon-700);min-width:0}
+.tm.cur{border-color:var(--gold-300);background:var(--maroon-700);box-shadow:0 0 0 3px rgba(236,208,138,.25)}
+.tm .no{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--gold-500);color:var(--maroon-950);font-weight:800;font-size:14px}
+.tm .nm{flex:1;min-width:0;font-weight:600;font-size:16px;line-height:1.3;overflow-wrap:anywhere}
+.tm .sc{font-size:22px;font-variant-numeric:tabular-nums;color:var(--gold-300)}
+.bt{margin:0 0 6px;font-size:14px;color:var(--gold-300);letter-spacing:.04em;font-weight:600}
+@media (prefers-reduced-motion:reduce){.cap.in,.shake{animation:none}.seg i{transition:none!important}}
+@media (max-width:560px){.nd{width:20px;height:20px;font-size:11px}.jr li::before{top:calc(30px + 8px)}.ship{width:30px;top:-4px}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <p class="eyebrow">പാഠം 2 · സൺഡേ സ്കൂൾ ക്വസ്റ്റ്</p>
+    <h1>തോമ്മാശ്ലീഹാ ഭാരതമണ്ണിലേക്ക്</h1>
+  </header>
+  <nav id="journey" aria-label="യാത്രയുടെ പുരോഗതി" hidden></nav>
+  <main id="stage" class="scroll"></main>
+  <section id="board" aria-label="ടീം സ്കോറുകൾ" hidden></section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var shuffle=function(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a};
+var LT=['എ','ബി','സി','ഡി'];
+var pg=function(n){return n};
+
+/* ---------- simple drawings used by the story clips ---------- */
+var ART={
+ ship:'<path d="M18 50h84l-12 16H30z" fill="currentColor"/><path d="M60 46V12l28 28H60z" fill="currentColor" opacity=".55"/><path d="M60 12v34"/><path d="M4 74q8-6 16 0t16 0t16 0t16 0t16 0t16 0t16 0"/>',
+ sun:'<circle cx="60" cy="40" r="14" fill="currentColor"/><path d="M60 8v10M60 62v10M26 40h10M84 40h10M36 16l7 7M77 57l7 7M84 16l-7 7M43 57l-7 7"/>',
+ heart:'<path d="M60 68C30 48 26 28 40 22c9-4 16 1 20 9 4-8 11-13 20-9 14 6 10 26-20 46z" fill="currentColor"/>',
+ fish:'<ellipse cx="52" cy="38" rx="30" ry="16" fill="currentColor" opacity=".85"/><path d="M82 38l24-15v30z" fill="currentColor"/><circle cx="38" cy="34" r="2.5" fill="#3d0f1a" stroke="none"/><path d="M4 70q8-6 16 0t16 0t16 0t16 0t16 0t16 0t16 0"/>',
+ scroll:'<rect x="30" y="16" width="60" height="48" rx="3" fill="currentColor" opacity=".25"/><rect x="24" y="10" width="72" height="9" rx="4.5" fill="currentColor"/><rect x="24" y="61" width="72" height="9" rx="4.5" fill="currentColor"/><path d="M40 30h40M40 40h40M40 50h26"/>',
+ book:'<path d="M60 20q-20-10-42-4v46q22-6 42 4q20-10 42-4V16q-22-6-42 4z" fill="currentColor" opacity=".25"/><path d="M60 20q-20-10-42-4v46q22-6 42 4q20-10 42-4V16q-22-6-42 4zM60 20v46"/>',
+ lamp:'<path d="M60 8q-9 10 0 20q9-10 0-20z" fill="currentColor"/><path d="M34 40h52M60 30v10M44 40q16 14 32 0M60 54v14M42 70h36"/>',
+ door:'<rect x="36" y="10" width="48" height="60" rx="3" fill="currentColor" opacity=".25"/><rect x="36" y="10" width="48" height="60" rx="3"/><circle cx="72" cy="42" r="3.5" fill="currentColor"/><path d="M22 72h76"/>',
+ shield:'<path d="M60 8l32 11v22c0 16-14 27-32 33C42 68 28 57 28 41V19z" fill="currentColor" opacity=".3"/><path d="M60 8l32 11v22c0 16-14 27-32 33C42 68 28 57 28 41V19zM60 24v38M46 40h28"/>',
+ road:'<path d="M52 10h16l32 62H20z" fill="currentColor" opacity=".3"/><path d="M52 10h16l32 62H20zM60 18v8M60 34v10M60 54v14"/>'
+};
+var svg=function(k){return '<svg viewBox="0 0 120 80" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">'+(ART[k]||ART.sun)+'</svg>'};
+
+/* ---------- content ---------- */
+
+var M=function(q,c,w,ref,x){return Object.assign({type:'mcq',q:q,opts:[c].concat(w),ref:ref},x||{})};
+
+/* extra drawings for this lesson */
+ART.dove='<path d="M22 54q24-4 36-22q8-12 26-12q-2 16-14 26q-12 12-28 10q-4 8-12 8q3-6 0-10z" fill="currentColor" opacity=".85"/><path d="M60 32q-5-17 6-25q2 15 16 15"/>';
+ART.crown='<path d="M26 58l-6-34l22 16l18-24l18 24l22-16l-6 34z" fill="currentColor" opacity=".3"/><path d="M26 58l-6-34l22 16l18-24l18 24l22-16l-6 34zM26 68h68"/>';
+ART.palace='<path d="M14 68h92M22 68V36h76v32M18 36l42-22l42 22zM40 68V46M60 68V46M80 68V46"/>';
+ART.jail='<rect x="28" y="12" width="64" height="56" rx="4" fill="currentColor" opacity=".25"/><rect x="28" y="12" width="64" height="56" rx="4"/><path d="M44 12v56M60 12v56M76 12v56"/>';
+ART.spice='<path d="M60 70V34"/><circle cx="60" cy="22" r="7" fill="currentColor"/><circle cx="46" cy="32" r="7" fill="currentColor"/><circle cx="74" cy="32" r="7" fill="currentColor"/><circle cx="52" cy="46" r="7" fill="currentColor"/><circle cx="68" cy="46" r="7" fill="currentColor"/><circle cx="60" cy="58" r="7" fill="currentColor"/>';
+ART.pin='<path d="M60 72C42 50 34 40 34 29a26 26 0 0 1 52 0c0 11-8 21-26 43z" fill="currentColor" opacity=".3"/><path d="M60 72C42 50 34 40 34 29a26 26 0 0 1 52 0c0 11-8 21-26 43z"/><circle cx="60" cy="29" r="9" fill="currentColor"/>';
+ART.cross='<path d="M54 8h12v20h22v12H66v32H54V40H32V28h22z" fill="currentColor" opacity=".85"/>';
+
+/* ---------- story clips (own wording, based on textbook pages 12-17) ---------- */
+var S1=[
+ {t:'ആർഷഭാരതം: പുരാതന സംസ്കാരങ്ങളുടെയും പല മതങ്ങളുടെയും നാട്.',a:'sun'},
+ {t:'എല്ലാ വിശ്വാസങ്ങളെയും അറിവുകളെയും സന്തോഷത്തോടെ സ്വീകരിച്ച നാടാണിത്.',a:'book'},
+ {t:'ക്രിസ്തുമതം ആദ്യനാളുകളിൽത്തന്നെ ഇവിടെയും എത്തി. ഈശോയുടെ പ്രിയശിഷ്യൻ തോമ്മാശ്ലീഹാ സുവിശേഷം അറിയിച്ചു.',a:'cross'},
+ {t:'റോമിൽ വിശ്വാസം എത്തുന്നതിനുമുമ്പ് നമ്മുടെ പൂർവ്വികർ ഈശോയെ കർത്താവും ദൈവവുമായി സ്വീകരിച്ചു.',a:'heart'},
+ {t:'അങ്ങനെ രൂപംകൊണ്ട സഭാസമൂഹമാണ് മാർത്തോമ്മാ നസ്രാണികൾ. രണ്ടായിരം വർഷം പഴക്കമുള്ള സഭയിലെ അംഗങ്ങളായതിൽ നമുക്ക് അഭിമാനിക്കാം.',a:'lamp'}];
+var S2=[
+ {t:'ഈശോയുടെ സുവിശേഷം എല്ലാ ജനതകൾക്കും വേണ്ടിയുള്ളതാണ്.',a:'sun'},
+ {t:'ജറുസലേമിലോ പാലസ്തീനായിലോ മാത്രം ഒതുങ്ങിനില്ക്കേണ്ടതല്ല അത്.',a:'pin'},
+ {t:'ലോകത്തിന്റെ അതിർത്തികൾവരെ സുവിശേഷം എത്തിച്ചേരണം.',a:'road'},
+ {t:'സ്വർഗ്ഗാരോഹണത്തിനുമുമ്പ് ഈശോ ശ്ലീഹന്മാരോടു പറഞ്ഞു: നിങ്ങൾ പോയി എല്ലാ ജനതകളെയും ശിഷ്യപ്പെടുത്തുവിൻ.',a:'scroll'},
+ {t:'പിതാവിന്റെയും പുത്രന്റെയും പരിശുദ്ധാത്മാവിന്റെയും നാമത്തിൽ അവർക്കു മാമ്മോദീസാ നല്കുവിൻ. എന്റെ കല്പനകൾ അനുസരിക്കാൻ അവരെ പഠിപ്പിക്കുവിൻ.',a:'scroll'}];
+var S3=[
+ {t:'പെന്തക്കുസ്താ ദിവസം. അന്നാണ് സഭ ഔദ്യോഗികമായി ഉദ്ഘാടനം ചെയ്യപ്പെട്ടത്.',a:'dove'},
+ {t:'പരിശുദ്ധാത്മാവ് ശ്ലീഹന്മാരുടെമേൽ ഇറങ്ങിവന്നു. അവർ ധൈര്യമുള്ളവരായി.',a:'dove'},
+ {t:'ജറുസലേമിൽനിന്ന് ശ്ലീഹന്മാർ വിവിധ നാടുകളിലേക്കു പോയി.',a:'road'},
+ {t:'ദീർഘയാത്ര ചെയ്ത്, കഷ്ടപ്പാടുകൾ സഹിച്ച് തോമ്മാശ്ലീഹാ ഭാരതത്തിൽ എത്തി, ഇവിടെ സുവിശേഷം പ്രസംഗിച്ചു.',a:'ship'}];
+var ARTS=[
+ {t:'മാർഗ്ഗംകളി: മാർത്തോമ്മാ നസ്രാണികളുടെ പരമ്പരാഗത കലാരൂപം.',a:'lamp'},
+ {t:'നിലവിളക്കിനു ചുറ്റും വൃത്തത്തിൽ നിന്ന്, താളത്തിൽ ചുവടുവച്ചാണ് ആട്ടം.',a:'lamp'},
+ {t:'പാട്ടു പാടിയും കൈകൊട്ടിയും കളിക്കാർ ചുവടുകൾ വയ്ക്കുന്നു.',a:'sun'},
+ {t:'പാട്ടുകളിൽ തോമ്മാശ്ലീഹായുടെ ജീവിതവും ഭാരതപ്രേഷിതത്വവും പറയുന്നു.',a:'scroll'},
+ {t:'പെരുന്നാളുകൾക്കും ആഘോഷങ്ങൾക്കും ഇത് അവതരിപ്പിക്കാറുണ്ട്.',a:'sun'}];
+var S5=[
+ {t:'പുരാതനകാലം മുതൽ വിദേശത്തുള്ളവർക്ക് കേരളത്തെ അറിയാമായിരുന്നു.',a:'pin'},
+ {t:'കാരണം ഇവിടെ വിളയുന്ന സുഗന്ധവ്യഞ്ജനങ്ങൾ: കുരുമുളക്, ഏലം, ചുക്ക്, കറുവാപ്പട്ട.',a:'spice'},
+ {t:'ചന്ദനം, തേക്ക്, ആനക്കൊമ്പ്, കുരങ്ങ്, മയിൽ എന്നിവയും വിദേശത്തു വളരെ പ്രിയപ്പെട്ടവയായിരുന്നു.',a:'ship'},
+ {t:'ജറുസലേം, റോം, അലക്സാന്ത്രിയ തുടങ്ങിയ നഗരങ്ങളുമായി കേരളത്തിനു കച്ചവടബന്ധം ഉണ്ടായിരുന്നു.',a:'road'}];
+var S6=[
+ {t:'കച്ചവടത്തിനായി അനേകം യഹൂദർ കേരളത്തിൽ എത്തിയിരുന്നു.',a:'ship'},
+ {t:'അവരിൽ കുറേപ്പേർ ഇവിടെ താമസമുറപ്പിക്കുകയും ചെയ്തു.',a:'pin'},
+ {t:'കച്ചവടക്കാരായ യഹൂദരോടൊപ്പം തോമ്മാശ്ലീഹായും ഇവിടെ എത്തിച്ചേർന്നു.',a:'ship'},
+ {t:'എ.ഡി. 52-ൽ കൊടുങ്ങല്ലൂർ പട്ടണത്തിൽ തോമ്മാശ്ലീഹാ കപ്പലിറങ്ങി.',a:'pin'}];
+var S7=[
+ {t:'തോമ്മാശ്ലീഹായുടെ ഭാരതയാത്രയെപ്പറ്റി രണ്ടു പുരാതനകൃതികൾ പറയുന്നു.',a:'book'},
+ {t:'ഒന്ന്: റമ്പാൻ പാട്ട്. മാളിയേക്കൽ തോമ്മാ റമ്പാൻ ഇതിനു രൂപം നല്കി.',a:'scroll'},
+ {t:'രണ്ട്: യൂദാതോമ്മായുടെ നടപടികൾ. മൂന്നാം നൂറ്റാണ്ടിന്റെ തുടക്കത്തിൽ എദേസായിൽവച്ച് സുറിയാനി ഭാഷയിൽ എഴുതപ്പെട്ടു.',a:'book'}];
+var S8=[
+ {t:'തമിഴ്നാട്ടിലെ രാജാവായ ചോഴപ്പെരുമാളിന് ഒരു കൊട്ടാരം പണിയണം.',a:'crown'},
+ {t:'അതിനായി ഒരു ശില്പിയെ കണ്ടെത്താൻ രാജാവ് തന്റെ ദൂതൻ ഹാബാനെ വിദേശത്തേക്ക് അയച്ചു.',a:'ship'},
+ {t:'ഹാബാൻ ഒരു ശില്പിയെ കണ്ടെത്തി: തോമ്മാശ്ലീഹാ.',a:'sun'},
+ {t:'ദൂതനോടൊപ്പം ശ്ലീഹാ അറേബ്യയിൽനിന്നു കപ്പലിൽ കയറി.',a:'ship'},
+ {t:'മാല്യങ്കരയിൽ (കൊടുങ്ങല്ലൂർ) വന്നിറങ്ങി ഈശോയെപ്പറ്റി പ്രസംഗിച്ചു.',a:'pin'},
+ {t:'തുടർന്ന് മൈലാപ്പൂരിൽ പോയി നാലുമാസം സുവിശേഷം അറിയിച്ചു.',a:'cross'}];
+var S9=[
+ {t:'ചോഴപ്പെരുമാളിൽനിന്നു ലഭിച്ച പണമെല്ലാം ശ്ലീഹാ പാവങ്ങൾക്കു നല്കി.',a:'heart'},
+ {t:'അപ്പോൾ കേരളത്തിലെ രാജാവിന്റെ മരുമകൻ ശ്ലീഹായെ കേരളത്തിലേക്കു ക്ഷണിച്ചു.',a:'road'},
+ {t:'ശ്ലീഹാ വീണ്ടും മാല്യങ്കരയിൽ എത്തി, ഒന്നരവർഷം സുവിശേഷം പ്രസംഗിച്ചു.',a:'ship'},
+ {t:'രാജകുടുംബാംഗങ്ങളും 3000 വിജാതീയരും 40 യഹൂദരും മാമ്മോദീസാ സ്വീകരിച്ചു.',a:'dove'},
+ {t:'രാജാവിന് അന്ത്രയോസ് എന്നും മരുമകന് കേപ്പാ എന്നും പേരുകൾ നല്കി. കേപ്പായ്ക്ക് പുരോഹിതപട്ടവും നല്കി.',a:'cross'},
+ {t:'കൊല്ലം, നിരണം, ചായൽ, കോക്കമംഗലം, കോട്ടക്കാവ്, പാലയൂർ എന്നിവിടങ്ങളിലും ശ്ലീഹാ ഈശോയെപ്പറ്റി പ്രസംഗിച്ചു.',a:'pin'}];
+var POEM=[
+ {t:'അറേബ്യതീരത്തുനിന്നൊരു കപ്പൽ\nകാറ്റിൻ ചിറകിൽ കുതിച്ചുപാഞ്ഞു.\nകൊട്ടാരം പണിയാനെത്തിയോരാൾ\nദൈവരാജ്യം പണിയാനെത്തി.',a:'ship'},
+ {t:'മാല്യങ്കരത്തീരം മുത്തമിട്ടു,\nകൊടുങ്ങല്ലൂർ കാതോർത്തുനിന്നു.\n“ഈശോ നിങ്ങളെ സ്നേഹിക്കുന്നു” എന്ന\nനല്ല വാർത്ത നാടു കേട്ടു.',a:'pin'},
+ {t:'കൊല്ലവും നിരണവും പാലയൂരും\nകോക്കമംഗലം, ചായലും കോട്ടക്കാവും,\nജലത്താൽ പുതുജീവൻ നേടിയ ജനങ്ങൾ\nമാമ്മോദീസായിൽ പുഞ്ചിരിച്ചു.',a:'dove'},
+ {t:'പണമെല്ലാം പാവങ്ങൾക്കേകിയ കൈകൾ\nസ്വർഗ്ഗത്തിൽ കൊട്ടാരം തീർത്തുവച്ചു.\nതോമ്മാശ്ലീഹായേ, ഭാരതപിതാവേ,\nവിശ്വാസദീപം കെടാതെ കാക്കണേ.',a:'lamp'}];
+var S11=[
+ {t:'ശ്ലീഹാ കൊട്ടാരം പണിതില്ല. പണമെല്ലാം പാവങ്ങൾക്കു നല്കി.',a:'heart'},
+ {t:'കുപിതനായ ചോഴപ്പെരുമാൾ ശ്ലീഹായെ ജയിലിലടച്ചു.',a:'jail'},
+ {t:'ആ സമയത്ത് രാജാവിന്റെ അനുജൻ മരിച്ചു. സ്വർഗ്ഗത്തിലെത്തിയ അദ്ദേഹം രാജാവിനായി നിർമ്മിക്കപ്പെട്ടിരിക്കുന്ന കൊട്ടാരം കണ്ടു.',a:'palace'},
+ {t:'അത്ഭുതകരമായി ഭൂമിയിലേക്കു തിരിച്ചെത്തിയ അനുജൻ രാജാവിനോടു വിവരം പറഞ്ഞു.',a:'sun'},
+ {t:'രാജാവ് ശ്ലീഹായെ ജയിലിൽനിന്നു മോചിപ്പിച്ചു.',a:'door'},
+ {t:'ചോഴപ്പെരുമാളും രണ്ടായിരം ജനങ്ങളും വിശ്വസിച്ച് മാമ്മോദീസാ സ്വീകരിച്ചു. അവിടെ ഒരു സഭ രൂപംകൊണ്ടു.',a:'dove'}];
+var S12=[
+ {t:'പെന്തക്കുസ്താദിവസം പരിശുദ്ധാത്മാവിനെ സ്വീകരിച്ച ശ്ലീഹന്മാർ ഈശോയെ പ്രസംഗിക്കാൻ തുടങ്ങി.',a:'dove'},
+ {t:'ഓരോരുത്തരും പോകേണ്ട സ്ഥലം അവർ തീരുമാനിച്ചു. തോമ്മാശ്ലീഹായ്ക്കു ഭാരതം ലഭിച്ചു.',a:'pin'},
+ {t:'വിദൂരമായ ഭാരതത്തിലേക്കു പോകാൻ ശ്ലീഹാ മടിച്ചു. പക്ഷേ ഒരു ദർശനത്തിൽ ഈശോ നിർദ്ദേശിച്ചതുപ്രകാരം സമ്മതിച്ചു.',a:'sun'},
+ {t:'ഇന്ത്യയിലെ രാജാവായ ഗുണ്ഡഫറസിന്റെ ദൂതൻ ഹാബാൻ കൊട്ടാരം പണിയാൻ ഒരു ശില്പിയെ തേടി അവിടെ എത്തിയിരുന്നു.',a:'crown'},
+ {t:'ഹാബാനോടൊപ്പം ശ്ലീഹാ സാന്ത്രൂക്ക് പട്ടണത്തിൽ എത്തി.',a:'ship'},
+ {t:'രാജാവു നല്കിയ പൊന്നും വെള്ളിയും ശ്ലീഹാ പാവങ്ങൾക്കു നല്കി. കോപിച്ച രാജാവ് അദ്ദേഹത്തെ ജയിലിലാക്കി.',a:'jail'},
+ {t:'രാജാവിന്റെ അനുജൻ ഗാദ് മരിച്ചു. സ്വർഗ്ഗത്തിൽ ശ്ലീഹാ നിർമ്മിച്ച കൊട്ടാരം അദ്ദേഹം കണ്ടു, സ്വപ്നത്തിൽ രാജാവിനോടു പറഞ്ഞു.',a:'palace'},
+ {t:'ശ്ലീഹാ മോചിതനായി. ഗുണ്ഡഫറസും കുടുംബവും നിരവധിയാളുകളും വിശ്വസിച്ചു. പിന്നീട് ശ്ലീഹാ മസ്ദായ് രാജാവിന്റെ രാജ്യത്തേക്കു പോയി.',a:'road'}];
+var S14=[
+ {t:'അറേബ്യയിൽനിന്നു കപ്പൽ കയറി മാല്യങ്കരയിൽ വന്നിറങ്ങി.',a:'ship'},
+ {t:'മൈലാപ്പൂരിൽ നാലുമാസം സുവിശേഷം അറിയിച്ചു.',a:'cross'},
+ {t:'കേരളത്തിലേക്കുള്ള ക്ഷണം സ്വീകരിച്ച് മാല്യങ്കരയിൽ ഒന്നരവർഷം പ്രസംഗിച്ചു.',a:'pin'},
+ {t:'മൈലാപ്പൂരിൽ ജയിൽവാസം. മോചനത്തിനുശേഷം ചോഴപ്പെരുമാളും രണ്ടായിരം പേരും മാമ്മോദീസാ സ്വീകരിച്ചു.',a:'dove'}];
+
+/* ---------- levels ---------- */
+var LEVELS=[
+ {title:'ആർഷഭാരതവും മാർത്തോമ്മാ നസ്രാണികളും',page:'12',where:'പേജ് 12-ലെ ആദ്യത്തെ മൂന്നു ഖണ്ഡികകൾ',scenes:S1,steps:[
+   {type:'info',title:'നമ്മൾ ആരാണ്?',body:'വിശ്വാസം നമുക്കു ലഭിച്ചത് മാർത്തോമ്മാശ്ലീഹായിൽനിന്ന്. അതുകൊണ്ട് നമ്മൾ മാർത്തോമ്മാ നസ്രാണികൾ.',note:'ഇത് വായിച്ചശേഷം ആദ്യ ടാസ്ക്കിലേക്ക് പോകൂ.'},
+   M('പുരാതനസംസ്കാരങ്ങളുടെയും വിവിധ മതങ്ങളുടെയും ഭൂമിയായ നമ്മുടെ നാടിനെ എന്തു വിളിക്കുന്നു?','ആർഷഭാരതം',['ആര്യാവർത്തം','സുവർണ്ണദ്വീപ്','ദ്രാവിഡദേശം'],'പാഠപുസ്തകം പേജ് 12'),
+   M('തോമ്മാശ്ലീഹായിൽനിന്നു വിശ്വാസം സ്വീകരിച്ച നമ്മൾ അറിയപ്പെടുന്നത് എങ്ങനെ?','മാർത്തോമ്മാ നസ്രാണികൾ',['യഹൂദ നസ്രാണികൾ','ഗലീലിയൻ സഭാംഗങ്ങൾ','റോമൻ ശ്ലീഹന്മാർ'],'പാഠപുസ്തകം പേജ് 12'),
+   M('റോമിൽ ക്രൈസ്തവവിശ്വാസം എത്തുന്നതിനുമുമ്പ് നമ്മുടെ പൂർവ്വികർ ഈശോയെ എങ്ങനെ സ്വീകരിച്ചു?','കർത്താവും ദൈവവുമായി',['ഒരു പ്രവാചകനായി മാത്രം','ഒരു രാജാവായി','ഒരു ഗുരുവായി മാത്രം'],'പാഠപുസ്തകം പേജ് 12'),
+   M('നമ്മുടെ സഭയ്ക്ക് ഏകദേശം എത്ര വർഷത്തെ പഴക്കമുണ്ട്?','രണ്ടായിരം വർഷം',['ഇരുനൂറു വർഷം','അഞ്ഞൂറു വർഷം','പതിനായിരം വർഷം'],'പാഠപുസ്തകം പേജ് 12')]},
+ {title:'ഈശോ നല്കിയ പ്രേഷിതദൗത്യം',page:'12–13',where:'പേജ് 12-ന്റെ അവസാനവും പേജ് 13-ന്റെ തുടക്കവും (മത്താ. 28:18–20)',scenes:S2,steps:[
+   {type:'info',title:'ഈശോയുടെ കല്പന (മത്താ. 28:19)',body:'“നിങ്ങൾപോയി എല്ലാ ജനതകളെയും ശിഷ്യപ്പെടുത്തുവിൻ. പിതാവിന്റെയും പുത്രന്റെയും പരിശുദ്ധാത്മാവിന്റെയും നാമത്തിൽ അവർക്കു മാമ്മോദീസാ നല്കുവിൻ.”',note:'പൂർണ്ണമായ വചനഭാഗം (മത്താ. 28:18–20) പാഠപുസ്തകം പേജ് 13-ൽ വായിക്കാം.'},
+   M('സ്വർഗ്ഗാരോഹണത്തിനുമുമ്പ് ഈശോ ശ്ലീഹന്മാർക്കു നല്കിയ ദൗത്യം എന്തായിരുന്നു?','എല്ലാ ജനതകളെയും ശിഷ്യപ്പെടുത്തി മാമ്മോദീസാ നല്കുക',['ജറുസലേം ദൈവാലയം പുതുക്കിപ്പണിയുക','റോമാസാമ്രാജ്യത്തെ ഭരിക്കുക','ഗലീലിയിൽ മീൻപിടുത്തം തുടരുക'],'മത്താ. 28:19; പാഠപുസ്തകം പേജ് 12–13'),
+   M('ഈശോയുടെ സുവിശേഷം എത്രത്തോളം എത്തിച്ചേരണം?','ലോകത്തിന്റെ അതിർത്തികൾവരെ',['ജറുസലേമിൽ മാത്രം','പാലസ്തീനായുടെ അതിർത്തിവരെ മാത്രം','റോമിൽ മാത്രം'],'പാഠപുസ്തകം പേജ് 12'),
+   M('ശ്ലീഹന്മാരോട് ഈശോ ആരുടെ നാമത്തിൽ മാമ്മോദീസാ നല്കാൻ പറഞ്ഞു?','പിതാവിന്റെയും പുത്രന്റെയും പരിശുദ്ധാത്മാവിന്റെയും',['മോശയുടെയും ഏലിയായുടെയും','ദാവീദിന്റെയും സോളമന്റെയും','പത്രോസിന്റെയും പൗലോസിന്റെയും'],'മത്താ. 28:19; പാഠപുസ്തകം പേജ് 13'),
+   M('ഈശോയുടെ ഈ കല്പന ഏത് വചനഭാഗത്താണ്?','മത്താ. 28:18–20',['യോഹ. 14:6','ലൂക്കാ 2:1–7','മർക്കോ. 1:1'],'പാഠപുസ്തകം പേജ് 13')]},
+ {title:'പെന്തക്കുസ്താ',page:'13',where:'പേജ് 13-ൽ “പെന്തക്കുസ്താദിവസം” എന്ന ഖണ്ഡിക',scenes:S3,steps:[
+   M('സഭ ഔദ്യോഗികമായി ഉദ്ഘാടനം ചെയ്യപ്പെട്ട ദിവസം ഏത്?','പെന്തക്കുസ്താ ദിവസം',['ക്രിസ്തുമസ് ദിവസം','ഓശാന ഞായർ','ദുഃഖവെള്ളി'],'പാഠപുസ്തകം പേജ് 13'),
+   M('പരിശുദ്ധാത്മാവ് ഇറങ്ങിവന്നപ്പോൾ ശ്ലീഹന്മാർക്ക് എന്തു സംഭവിച്ചു?','അവർ ധൈര്യമുള്ളവരായി',['അവർ ഭയന്ന് ഒളിച്ചു','അവർ ഉറങ്ങിപ്പോയി','അവർ മീൻപിടിക്കാൻ പോയി'],'പാഠപുസ്തകം പേജ് 13'),
+   M('പെന്തക്കുസ്തായ്ക്കുശേഷം ശ്ലീഹന്മാർ എന്തു ചെയ്തു?','ജറുസലേമിൽനിന്നു വിവിധ നാടുകളിലേക്കു പോയി സുവിശേഷം പ്രസംഗിച്ചു',['എല്ലാവരും ജറുസലേമിൽത്തന്നെ താമസിച്ചു','ഗലീലിയിലേക്കു മടങ്ങി മീൻപിടിച്ചു','ഒളിവിൽ പോയി'],'പാഠപുസ്തകം പേജ് 13')]},
+ {title:'കലാ ലെവൽ: മാർഗ്ഗംകളി',page:null,scenes:ARTS,steps:[
+   {type:'video',title:'മാർഗ്ഗംകളി കാണാം',scenes:ARTS,note:'അധ്യാപകർക്ക്: യഥാർത്ഥ മാർഗ്ഗംകളി ക്ലിപ്പ് ക്ലാസ്സിൽ കാണിക്കാം. ഈ വിവരണം പൊതുവായ അറിവാണ്, പാഠപുസ്തകത്തിൽ ഇല്ല. കണ്ടശേഷം 5 ചോദ്യങ്ങൾ, കുറഞ്ഞത് 3 ശരി വേണം.'},
+   M('മാർഗ്ഗംകളി ആരുടെ പരമ്പരാഗത കലാരൂപമാണ്?','മാർത്തോമ്മാ നസ്രാണികളുടെ (കേരളത്തിലെ സുറിയാനി ക്രൈസ്തവരുടെ)',['ബംഗാളിലെ നെയ്ത്തുകാരുടെ','തമിഴ്നാട്ടിലെ കർഷകരുടെ','ഗുജറാത്തിലെ വ്യാപാരികളുടെ'],'കലാ ലെവൽ വീഡിയോ',{group:'art'}),
+   M('മാർഗ്ഗംകളിക്കാർ എന്തിനു ചുറ്റും നിന്ന് ആടുന്നു?','നിലവിളക്കിന്',['ആൽമരത്തിന്','കൊടിമരത്തിന്','കിണറിന്'],'കലാ ലെവൽ വീഡിയോ',{group:'art'}),
+   M('മാർഗ്ഗംകളിപ്പാട്ടുകളിൽ ഏതു ശ്ലീഹായുടെ ജീവിതം പറയുന്നു?','തോമ്മാശ്ലീഹായുടെ',['പത്രോസ് ശ്ലീഹായുടെ','പൗലോസ് ശ്ലീഹായുടെ','യാക്കോബ് ശ്ലീഹായുടെ'],'കലാ ലെവൽ വീഡിയോ',{group:'art'}),
+   M('മാർഗ്ഗംകളിയുടെ ആട്ടരീതി എങ്ങനെ?','വൃത്തത്തിൽ നിന്ന്, താളത്തിൽ ചുവടുവച്ച്, പാട്ടു പാടി',['ഒറ്റയ്ക്ക് ഇരുന്നുകൊണ്ട്','ഓടിക്കൊണ്ട് മത്സരിച്ച്','നിശ്ശബ്ദമായി നിന്നുകൊണ്ട്'],'കലാ ലെവൽ വീഡിയോ',{group:'art'}),
+   M('മാർഗ്ഗംകളി എപ്പോഴൊക്കെ അവതരിപ്പിക്കാറുണ്ട്?','പെരുന്നാളുകൾക്കും ആഘോഷങ്ങൾക്കും',['ഉറങ്ങുന്നതിനുമുമ്പ് മാത്രം','യുദ്ധസമയത്തു മാത്രം','ദിവസവും ഉച്ചഭക്ഷണത്തിനുശേഷം'],'കലാ ലെവൽ വീഡിയോ',{group:'art'}),
+   {type:'gate',group:'art',need:3,back:0}]},
+ {title:'ഭാരതത്തിലേക്ക് എന്തുകൊണ്ട്?',page:'13–14',where:'പേജ് 13-ലെ “ഭാരതത്തിലേക്ക് എന്തുകൊണ്ട്?” എന്ന ഭാഗം',scenes:S5,steps:[
+   M('കേരളത്തെപ്പറ്റി വിദേശത്തുള്ളവർ പുരാതനകാലം മുതൽ അറിയാൻ കാരണം എന്ത്?','ഇവിടെ വിളയുന്ന സുഗന്ധവ്യഞ്ജനങ്ങൾ',['ഇവിടത്തെ വലിയ സൈന്യം','ഇവിടത്തെ സ്വർണ്ണഖനികൾ','ഇവിടത്തെ ഉയർന്ന മഞ്ഞുമലകൾ'],'പാഠപുസ്തകം പേജ് 13'),
+   M('വിദേശത്തു വളരെ പ്രിയപ്പെട്ടിരുന്ന കേരളത്തിലെ ഒരു സുഗന്ധവ്യഞ്ജനം ഏത്?','ഏലം',['ഗോതമ്പ്','പരുത്തി','ഇരുമ്പയിര്'],'പാഠപുസ്തകം പേജ് 13'),
+   M('ആനക്കൊമ്പ്, കുരങ്ങ് എന്നിവയോടൊപ്പം കേരളത്തിൽനിന്നു കൊണ്ടുപോയിരുന്ന പക്ഷി ഏത്?','മയിൽ',['കാക്ക','കോഴി','പ്രാവ്'],'പാഠപുസ്തകം പേജ് 13'),
+   M('ഏതു നഗരവുമായി കേരളത്തിനു കച്ചവടബന്ധം ഉണ്ടായിരുന്നു?','അലക്സാന്ത്രിയ',['ടോക്കിയോ','ലണ്ടൻ','ന്യൂയോർക്ക്'],'പാഠപുസ്തകം പേജ് 13–14')]},
+ {title:'കൊടുങ്ങല്ലൂരിൽ കപ്പലിറങ്ങി',page:'14',where:'പേജ് 14-ലെ ആദ്യത്തെ ഖണ്ഡിക',scenes:S6,steps:[
+   M('കച്ചവടത്തിനായി കേരളത്തിൽ എത്തിയിരുന്നത് ആരൊക്കെ?','അനേകം യഹൂദർ',['റോമൻ പട്ടാളക്കാർ','ഈജിപ്തിലെ ഫറവോമാർ','ഗലീലിയിലെ മീൻപിടുത്തക്കാർ'],'പാഠപുസ്തകം പേജ് 14'),
+   M('തോമ്മാശ്ലീഹാ ഇവിടെ എത്തിച്ചേർന്നത് ആരോടൊപ്പം?','കച്ചവടക്കാരായ യഹൂദരോടൊപ്പം',['റോമൻ സൈന്യത്തോടൊപ്പം','ഒറ്റയ്ക്ക് കാൽനടയായി','ചൈനീസ് വ്യാപാരികളോടൊപ്പം'],'പാഠപുസ്തകം പേജ് 14'),
+   M('എ.ഡി. 52-ൽ തോമ്മാശ്ലീഹാ കപ്പലിറങ്ങിയ പട്ടണം ഏത്?','കൊടുങ്ങല്ലൂർ',['മൈലാപ്പൂർ','കൊല്ലം','പാലയൂർ'],'പാഠപുസ്തകം പേജ് 14')]},
+ {title:'രണ്ടു പുരാതനകൃതികൾ',page:'14, 16',where:'പേജ് 14-ന്റെ നടുവിലെ ഭാഗവും പേജ് 16-ന്റെ തുടക്കവും',scenes:S7,steps:[
+   M('തോമ്മാശ്ലീഹായുടെ ഭാരതപ്രേഷിതത്വത്തെപ്പറ്റി വിവരിക്കുന്ന രണ്ടു പുരാതനകൃതികൾ ഏവ?','റമ്പാൻ പാട്ട്, യൂദാതോമ്മായുടെ നടപടികൾ',['രാമായണം, മഹാഭാരതം','സങ്കീർത്തനങ്ങൾ, ഉത്തമഗീതം','നടപടി പുസ്തകം, വെളിപാട്'],'പാഠപുസ്തകം പേജ് 14, 17 (ഉത്തരം കണ്ടെത്താം 3)'),
+   M('റമ്പാൻ പാട്ടിന് രൂപം നല്കിയതാര്?','മാളിയേക്കൽ തോമ്മാ റമ്പാൻ',['ചോഴപ്പെരുമാൾ','ഹാബാൻ','ഗുണ്ഡഫറസ്'],'പാഠപുസ്തകം പേജ് 14, 17 (ഉത്തരം കണ്ടെത്താം 4)'),
+   M('“യൂദാതോമ്മായുടെ നടപടികൾ” ഏതു ഭാഷയിൽ എഴുതപ്പെട്ടു?','സുറിയാനി',['ലാറ്റിൻ','ഹിന്ദി','ഇംഗ്ലീഷ്'],'പാഠപുസ്തകം പേജ് 16'),
+   M('യൂദാതോമ്മായുടെ നടപടികൾ എഴുതപ്പെട്ടത് ഏതു കാലത്ത്?','മൂന്നാം നൂറ്റാണ്ടിന്റെ തുടക്കത്തിൽ',['ഒന്നാം നൂറ്റാണ്ടിന്റെ തുടക്കത്തിൽ','പത്താം നൂറ്റാണ്ടിൽ','പതിനഞ്ചാം നൂറ്റാണ്ടിൽ'],'പാഠപുസ്തകം പേജ് 16')]},
+ {title:'റമ്പാൻ പാട്ട്: ചോഴപ്പെരുമാളും ഹാബാനും',page:'14',where:'പേജ് 14-ൽ “റമ്പാൻ പാട്ട്” എന്ന ഭാഗം',scenes:S8,steps:[
+   M('ചോഴപ്പെരുമാൾ ഏതു നാട്ടിലെ രാജാവായിരുന്നു?','തമിഴ്നാട്',['ഗുജറാത്ത്','പഞ്ചാബ്','ബംഗാൾ'],'പാഠപുസ്തകം പേജ് 14'),
+   M('ചോഴപ്പെരുമാൾ ദൂതനായ ഹാബാനെ വിദേശത്തേക്ക് അയച്ചത് എന്തിന്?','കൊട്ടാരം പണിയാൻ ഒരു ശില്പിയെ തേടാൻ',['കച്ചവടം ചെയ്യാൻ','യുദ്ധത്തിനു സൈന്യത്തെ കൊണ്ടുവരാൻ','സുഗന്ധവ്യഞ്ജനങ്ങൾ വാങ്ങാൻ'],'പാഠപുസ്തകം പേജ് 14'),
+   M('ശ്ലീഹാ ഏതു നാട്ടിൽനിന്നാണ് കപ്പലിൽ കയറിയത്?','അറേബ്യ',['ചൈന','ഇറ്റലി','ഈജിപ്ത്'],'പാഠപുസ്തകം പേജ് 14'),
+   M('ശ്ലീഹാ വന്നിറങ്ങിയ മാല്യങ്കര ഇന്ന് ഏതു പട്ടണം?','കൊടുങ്ങല്ലൂർ',['കൊല്ലം','പാലയൂർ','നിരണം'],'പാഠപുസ്തകം പേജ് 14'),
+   M('മൈലാപ്പൂരിൽ ശ്ലീഹാ എത്രകാലം സുവിശേഷം അറിയിച്ചു?','നാലുമാസം',['ഒരാഴ്ച','പത്തുവർഷം','ഒരു ദിവസം'],'പാഠപുസ്തകം പേജ് 14')]},
+ {title:'റമ്പാൻ പാട്ട്: കേരളത്തിൽ സുവിശേഷം',page:'14–15',where:'പേജ് 14-ന്റെ അവസാനവും പേജ് 15-ന്റെ തുടക്കവും',scenes:S9,steps:[
+   M('മാല്യങ്കരയിൽ രണ്ടാമതു വന്നപ്പോൾ ശ്ലീഹാ എത്രകാലം സുവിശേഷം പ്രസംഗിച്ചു?','ഒന്നരവർഷം',['ഒരാഴ്ച','അഞ്ചുവർഷം','ഒരു ദിവസം'],'പാഠപുസ്തകം പേജ് 15'),
+   M('മാമ്മോദീസായിൽ കേരളത്തിലെ രാജാവിനു നല്കിയ പേര് എന്ത്?','അന്ത്രയോസ്',['പത്രോസ്','പൗലോസ്','യോഹന്നാൻ'],'പാഠപുസ്തകം പേജ് 15'),
+   M('രാജാവിന്റെ മരുമകനായ കേപ്പായ്ക്കു ശ്ലീഹാ എന്തു നല്കി?','പുരോഹിതപട്ടം',['രാജകിരീടം','സ്വർണ്ണമോതിരം','രാജ്യഭരണം'],'പാഠപുസ്തകം പേജ് 15'),
+   M('ശ്ലീഹാ സുവിശേഷം പ്രസംഗിച്ച ഒരു സ്ഥലം ഏത്?','തൃപ്പാലേശ്വരം (നിരണം)',['കണ്ണൂർ','കാസർകോട്','ഇടുക്കി'],'പാഠപുസ്തകം പേജ് 15')]},
+ {title:'കവിതാ ലെവൽ: വിശ്വാസദീപം',page:null,scenes:POEM,steps:[
+   {type:'video',title:'കവിത ശ്രദ്ധയോടെ കേൾക്കാം',scenes:POEM,note:'ഈ പാഠത്തിനായി തയ്യാറാക്കിയ കവിത. ഈണം നൽകി ഓഡിയോ ചേർക്കുകയോ ക്ലാസ്സിൽ ഒരുമിച്ച് ചൊല്ലുകയോ ചെയ്യാം.'},
+   M('കവിതയിൽ ശ്ലീഹാ ഏതു തീരത്താണ് വന്നിറങ്ങിയത്?','മാല്യങ്കര (കൊടുങ്ങല്ലൂർ)',['മൈലാപ്പൂർ','ഗോവ','മുംബൈ'],'കവിത, രണ്ടാം ഖണ്ഡിക; പാഠപുസ്തകം പേജ് 14'),
+   M('കൊട്ടാരം പണിയാനെത്തിയ ശ്ലീഹാ എന്തു പണിയാനെത്തി എന്നാണ് കവിത പറയുന്നത്?','ദൈവരാജ്യം',['കോട്ട','പാലം','പള്ളിക്കൂടം'],'കവിത, ഒന്നാം ഖണ്ഡിക')]},
+ {title:'കൊട്ടാരവും കാരാഗൃഹവും',page:'15',where:'പേജ് 15-ന്റെ താഴത്തെ ഭാഗം',scenes:S11,steps:[
+   M('ശ്ലീഹായെ ജയിലിലടയ്ക്കാൻ ചോഴപ്പെരുമാളിനെ പ്രേരിപ്പിച്ചത് എന്ത്?','കൊട്ടാരം പണിയാതെ പണം പാവങ്ങൾക്കു നല്കിയത്',['ശ്ലീഹാ രാജ്യം വിട്ടുപോയത്','ശ്ലീഹാ രാജാവിനെ കാണാൻ വിസമ്മതിച്ചത്','ശ്ലീഹാ പടയെ നയിച്ചത്'],'പാഠപുസ്തകം പേജ് 15'),
+   M('രാജാവിന്റെ അനുജൻ സ്വർഗ്ഗത്തിൽ എന്തു കണ്ടു?','രാജാവിനായി നിർമ്മിക്കപ്പെട്ടിരിക്കുന്ന കൊട്ടാരം',['ഒരു വലിയ കപ്പൽ','ഒരു പൊൻകിരീടം','ഒരു കൊടുങ്കാറ്റ്'],'പാഠപുസ്തകം പേജ് 15'),
+   M('ഈ സംഭവത്തിനുശേഷം ചോഴപ്പെരുമാളോടൊപ്പം എത്ര ജനങ്ങൾ മാമ്മോദീസാ സ്വീകരിച്ചു?','രണ്ടായിരം',['ഇരുപത്','നൂറ്','രണ്ടുലക്ഷം'],'പാഠപുസ്തകം പേജ് 15')]},
+ {title:'യൂദാതോമ്മായുടെ നടപടികൾ',page:'16–17',where:'പേജ് 16-ലെ “യൂദാതോമ്മായുടെ നടപടികൾ” എന്ന ഭാഗവും പേജ് 17-ന്റെ തുടക്കവും',scenes:S12,steps:[
+   M('ഭാരതത്തിലേക്കു പോകാൻ മടിച്ച ശ്ലീഹാ പിന്നീട് എങ്ങനെയാണ് സമ്മതിച്ചത്?','ഒരു ദർശനത്തിൽ ഈശോ നിർദ്ദേശിച്ചതുപ്രകാരം',['രാജാവിന്റെ ഭീഷണി കാരണം','മറ്റു ശ്ലീഹന്മാർ നിർബന്ധിച്ചതുകൊണ്ട്','സമ്മാനം ലഭിച്ചതുകൊണ്ട്'],'പാഠപുസ്തകം പേജ് 16'),
+   M('ഗുണ്ഡഫറസ് രാജാവിന്റെ അനുജന്റെ പേര് എന്ത്?','ഗാദ്',['ഹാബാൻ','അന്ത്രയോസ്','കേപ്പാ'],'പാഠപുസ്തകം പേജ് 16'),
+   M('ശ്ലീഹാ അവസാനം ഏതു രാജാവിന്റെ രാജ്യത്തേക്കു സുവിശേഷപ്രവർത്തനത്തിനായി പോയി?','മസ്ദായ്',['ഹേറോദാവ്','ചോഴപ്പെരുമാൾ','ഗുണ്ഡഫറസ്'],'പാഠപുസ്തകം പേജ് 17'),
+   M('പേജ് 16-ൽ ശ്ലീഹായെ ഭാഗ്യവാനെന്നു വിളിച്ച സുറിയാനി സഭാപിതാവ് ആര്?','മാർ അപ്രേം',['മാർ പൗലോസ്','മാർ യോഹന്നാൻ','മാർ യാക്കോബ്'],'പാഠപുസ്തകം പേജ് 16'),
+   {type:'match',q:'ബോണസ്: ഓരോ പേരും അതിന്റെ വിവരണവുമായി ചേർക്കുക. ഇടതുവശത്തെ പേര് തൊട്ടശേഷം വലതുവശത്തെ ശരിയായ വിവരണം തൊടുക.',pairs:[['ചോഴപ്പെരുമാൾ','തമിഴ്നാട്ടിലെ രാജാവ്'],['കേപ്പാ','കേരളത്തിലെ രാജാവിന്റെ മരുമകൻ'],['ഗുണ്ഡഫറസ്','ഇന്ത്യയിലെ രാജാവ് (യൂദാതോമ്മായുടെ നടപടികൾ)'],['ഗാദ്','ഗുണ്ഡഫറസിന്റെ അനുജൻ']],ref:'പാഠപുസ്തകം പേജ് 14–16'}]},
+ {title:'പ്രവർത്തന ലെവൽ',page:null,scenes:null,steps:[
+   {type:'tasks',tasks:[
+     {h:'കവിതാരചന',d:'തോമ്മാശ്ലീഹായുടെ ഭാരതത്തിലേക്കുള്ള വരവിനെപ്പറ്റിയും സുവിശേഷപ്രഘോഷണത്തെപ്പറ്റിയും ഒരു ചെറുകവിത എഴുതുക. ഏറ്റവും നല്ല കവിത ക്ലാസ്സിൽ ചൊല്ലുക.',p:'17 (B)',sec:600,max:20},
+     {h:'ചലച്ചിത്രം കാണാം',d:'“തോമ്മാശ്ലീഹാ” എന്ന മലയാള ചലച്ചിത്രം ഇന്റർനെറ്റിൽ യൂട്യൂബിൽ ലഭ്യമാണെന്ന് പാഠപുസ്തകം പറയുന്നു. ഇത് ഡൗൺലോഡ് ചെയ്ത് ക്ലാസ്സിൽ പ്രദർശിപ്പിച്ചശേഷം ഒരു ചർച്ച നടത്തുക.',p:'15',sec:0,max:20},
+     {h:'നമുക്കു പാടാം',d:'പാഠപുസ്തകത്തിലെ “നമുക്കു പാടാം” ഗാനങ്ങൾ ഗ്രൂപ്പായി അർത്ഥം മനസ്സിലാക്കി പാടുക.',p:'13, 15',sec:0,max:20},
+     {h:'ഉത്തരം കണ്ടെത്താം',d:'ഓരോ ടീമിനും ഓരോ ചോദ്യം: 1. സ്വർഗ്ഗാരോഹണത്തിനുമുമ്പ് ഈശോ ശിഷ്യന്മാർക്കു നല്കിയ ദൗത്യം എന്തായിരുന്നു? 2. സഭ ഔദ്യോഗികമായി ഉദ്ഘാടനം ചെയ്യപ്പെട്ട ദിവസം ഏത്? 3. ഭാരതപ്രേഷിതത്വത്തെപ്പറ്റി വിവരിക്കുന്ന രണ്ടു പുരാതനകൃതികൾ ഏവ? 4. റമ്പാൻ പാട്ടിന് രൂപം നല്കിയതാര്? ഉത്തരം ബോർഡിൽ എഴുതുക.',p:'17',sec:0,max:20}]}]},
+ {title:'അവസാന ലെവൽ',page:'14–15',where:'പേജ് 14, 15',scenes:S14,steps:[
+   {type:'order',pts:20,q:'ഫൈനൽ ബോസ്: റമ്പാൻ പാട്ടിലെ തോമ്മാശ്ലീഹായുടെ യാത്ര സംഭവിച്ച ക്രമത്തിൽ തൊടുക. ആദ്യം നടന്നത് ആദ്യം.',items:['അറേബ്യയിൽനിന്നു കപ്പൽ കയറി മാല്യങ്കര (കൊടുങ്ങല്ലൂർ) തീരത്തു വന്നിറങ്ങി','മൈലാപ്പൂരിൽ നാലുമാസം സുവിശേഷം അറിയിച്ചു','കേരളത്തിലെ രാജാവിന്റെ മരുമകന്റെ ക്ഷണപ്രകാരം മാല്യങ്കരയിൽ ഒന്നരവർഷം പ്രസംഗിച്ചു','വീണ്ടും മൈലാപ്പൂരിൽ: കൊട്ടാരം പണിയാത്തതിനാൽ ചോഴപ്പെരുമാൾ ശ്ലീഹായെ ജയിലിലടച്ചു','അനുജന്റെ വിവരണത്താൽ ശ്ലീഹാ മോചിതനായി; ചോഴപ്പെരുമാളും രണ്ടായിരം പേരും മാമ്മോദീസാ സ്വീകരിച്ചു'],ref:'പാഠപുസ്തകം പേജ് 14–15'},
+   {type:'tasks',tasks:[
+     {h:'നമുക്കു പാടാം മത്സരം',d:'ഓരോ ടീമും പാഠത്തിലെ “നമുക്കു പാടാം” ഗാനം അർത്ഥം പറഞ്ഞ് പാടുക. ഏറ്റവും മികച്ച ടീമിന് സമ്മാനം.',p:'13, 15',sec:0,max:30},
+     {h:'ഒരുമിച്ച് ഏറ്റുപറയാം',d:'എല്ലാവരും ചേർന്ന് ഉറക്കെ പറയുക: “ഞങ്ങൾ മാർത്തോമ്മാ നസ്രാണികൾ. തോമ്മാശ്ലീഹായിൽനിന്നു ലഭിച്ച വിശ്വാസം ഞങ്ങൾ കാത്തുസൂക്ഷിക്കും.”',p:'12',sec:0,max:0}]}]}
+];
+
+/* ---------- state ---------- */
+var S={phase:'setup',n:3,teams:[],turn:0,lvl:0,step:0,mode:'play',help:'choose',q:null,group:{}};
+var stage=$('#stage'),jr=$('#journey'),board=$('#board');
+var cleanup=[];
+var onClean=function(f){cleanup.push(f)};
+var runClean=function(){while(cleanup.length){try{cleanup.pop()()}catch(e){}}};
+
+var LV=function(){return LEVELS[S.lvl]};
+var ST=function(){return LV().steps[S.step]};
+var TEAM=function(){return S.teams[S.turn%S.teams.length]};
+var isQ=function(t){return t==='mcq'||t==='match'||t==='order'};
+
+function initQ(){
+  var st=ST(),q={helped:false,result:null,gain:0,picked:null,mistakes:0};
+  if(st.type==='mcq'){q.opts=shuffle(st.opts)}
+  if(st.type==='match'){q.right=shuffle(st.pairs.map(function(_,i){return i}));q.done={};q.selL=null}
+  if(st.type==='order'){q.order=shuffle(st.items.map(function(_,i){return i}));q.seq=[]}
+  if(st.type==='tasks'){q.aw={}}
+  return q;
+}
+
+/* ---------- rendering ---------- */
+function render(){
+  runClean();
+  if(S.phase==='setup'){renderSetup();jr.hidden=true;board.hidden=true;return}
+  jr.hidden=false;board.hidden=false;
+  renderJourney();renderBoard();
+  if(S.phase==='end'){renderEnd();return}
+  if(S.mode==='help'){renderHelp();return}
+  var st=ST();
+  ({mcq:rMcq,match:rMatch,order:rOrder,video:rVideo,info:rInfo,gate:rGate,tasks:rTasks})[st.type](st);
+}
+
+function renderJourney(){
+  var h='<ol class="jr">';
+  LEVELS.forEach(function(L,i){
+    var c=S.phase==='end'||i<S.lvl?'done':(i===S.lvl?'cur':'');
+    h+='<li class="'+c+'" title="'+esc(L.title)+'"><span class="nd">'+(c==='done'?'✓':(i+1))+'</span>'+(c==='cur'?'<span class="ship">'+svg('ship')+'</span>':'')+'</li>';
+  });
+  h+='</ol>';
+  if(S.phase==='end'){h=h.replace('</ol>','</ol>')}
+  jr.innerHTML=h;
+}
+function renderBoard(){
+  var cur=S.turn%S.teams.length;
+  board.innerHTML='<p class="bt">ടീം സ്കോർ</p><div class="board">'+S.teams.map(function(t,i){
+    return '<div class="tm'+(i===cur&&S.phase!=='end'?' cur':'')+'"><span class="no">'+(i+1)+'</span><span class="nm">'+esc(t.name)+'</span><b class="sc">'+t.score+'</b></div>';
+  }).join('')+'</div>';
+}
+function head(){
+  var L=LV();
+  return '<div class="lh"><span class="chip">ലെവൽ '+(S.lvl+1)+' / '+LEVELS.length+'</span><h2>'+esc(L.title)+'</h2>'+(L.page?'<span class="chip pg">പാഠപുസ്തകം പേജ് '+esc(L.page)+'</span>':'')+'</div>';
+}
+function turnHTML(){return '<div class="turn">'+esc(TEAM().name)+' ടീമിന്റെ ഊഴം</div>'}
+function qNo(){
+  var L=LV(),idx=0,tot=0;
+  L.steps.forEach(function(s,i){if(isQ(s.type)){tot++;if(i<=S.step)idx++}});
+  return tot>1?' <span class="chip" style="background:var(--parch-300);color:var(--maroon-800)">ചോദ്യം '+idx+' / '+tot+'</span>':'';
+}
+function helpBtn(){return '<button class="btn ghost" data-act="help">ഉത്തരം അറിയില്ല, സഹായം വേണം</button>'}
+
+function rMcq(st){
+  var q=S.q,correct=q.opts.indexOf(st.opts[0]);
+  var h=head()+turnHTML()+qNo()+'<p class="q">'+esc(st.q)+'</p><div class="opts">';
+  q.opts.forEach(function(o,i){
+    var c='';
+    if(q.result==='first'||q.result==='helped'){if(i===q.picked)c=' ok'}
+    else if(q.result==='miss'){if(i===correct)c=' reveal';if(i===q.picked)c=' bad'}
+    else if(q.result==='wrong1'){if(i===q.picked)c=' bad shake'}
+    h+='<button class="opt'+c+'" data-act="opt" data-i="'+i+'"'+(q.result?' disabled':'')+'><span class="ltr">'+LT[i]+'</span><span>'+esc(o)+'</span></button>';
+  });
+  h+='</div>';
+  var hasHelp=!!(LV().page||LV().scenes);
+  if(!q.result){h+='<div class="row">'+(hasHelp?helpBtn():'')+'</div>'}
+  else if(q.result==='wrong1'){
+    h+='<div class="msg warn"><b>ശരിയായില്ല.</b> സാരമില്ല! സഹായം എടുത്ത് വീഡിയോ കാണുകയോ പുസ്തകം വായിക്കുകയോ ചെയ്തശേഷം വീണ്ടും ഉത്തരം പറയാം.</div><div class="row"><button class="btn gold" data-act="help">സഹായം എടുക്കാം</button></div>';
+  }else{
+    var m=q.result==='first'?'<div class="msg good"><b>ശരിയാണ്!</b> <span class="pts">+'+q.gain+' പോയിന്റ്</span> '+esc(TEAM().name)+' ടീമിന്.</div>'
+      :q.result==='helped'?'<div class="msg good"><b>ഇപ്പോൾ ശരിയായി!</b> പഠിച്ചാണ് ഉത്തരം പറഞ്ഞത്. <span class="pts">+'+q.gain+' പോയിന്റ്</span></div>'
+      :'<div class="msg warn"><b>ഇത്തവണ പോയിന്റ് ഇല്ല.</b> ശരിയുത്തരം പച്ച വരയിട്ട ബോക്സിൽ കാണാം.</div>';
+    h+=m+'<p class="ref"><b>റഫറൻസ്:</b> '+esc(st.ref)+'</p><div class="row"><button class="btn gold" data-act="next">അടുത്തത് ›</button></div>';
+  }
+  stage.innerHTML=h;
+}
+
+function rMatch(st){
+  var q=S.q,n=st.pairs.length,done=Object.keys(q.done).length;
+  var h=head()+turnHTML()+qNo()+'<p class="q">'+esc(st.q)+'</p><div class="mt"><div class="col">';
+  st.pairs.forEach(function(p,i){
+    var c=q.done[i]!==undefined?' dn':(q.selL===i?' sel':'');
+    h+='<button class="opt'+c+'" data-act="ml" data-i="'+i+'"'+(q.done[i]!==undefined?' disabled':'')+'><span>'+esc(p[0])+'</span></button>';
+  });
+  h+='</div><div class="col">';
+  q.right.forEach(function(ri){
+    var used=Object.keys(q.done).some(function(k){return q.done[k]===ri});
+    h+='<button class="opt'+(used?' dn':'')+'" data-act="mr" data-i="'+ri+'"'+(used?' disabled':'')+'><span>'+esc(st.pairs[ri][1])+'</span></button>';
+  });
+  h+='</div></div>';
+  if(done<n){h+='<div class="row">'+(LV().page?helpBtn():'')+'<span class="ref">ചേർത്തത്: '+done+' / '+n+(q.mistakes?' · തെറ്റിയത്: '+q.mistakes:'')+'</span></div>'}
+  else{h+=finishHTML(st)}
+  stage.innerHTML=h;
+}
+function rOrder(st){
+  var q=S.q,n=st.items.length;
+  var h=head()+turnHTML()+qNo()+'<p class="q">'+esc(st.q)+'</p><div class="ord">';
+  q.order.forEach(function(ii){
+    var pos=q.seq.indexOf(ii);
+    h+='<button class="opt" data-act="od" data-i="'+ii+'"'+(pos>=0?' disabled':'')+'><span class="ltr'+(pos>=0?' n':'')+'">'+(pos>=0?(pos+1):'?')+'</span><span>'+esc(st.items[ii])+'</span></button>';
+  });
+  h+='</div>';
+  if(q.seq.length<n){h+='<div class="row">'+helpBtn()+(q.mistakes?'<span class="ref">തെറ്റിയത്: '+q.mistakes+'</span>':'')+'</div>'}
+  else{h+=finishHTML(st)}
+  stage.innerHTML=h;
+}
+function finishHTML(st){
+  var q=S.q;
+  return '<div class="msg good"><b>അടിപൊളി!</b> <span class="pts">+'+q.gain+' പോയിന്റ്</span> '+esc(TEAM().name)+' ടീമിന്'+(q.result==='helped'?' (തെറ്റുകളോ സഹായമോ ഉള്ളതിനാൽ പകുതി പോയിന്റ്)':'')+'.</div><p class="ref"><b>റഫറൻസ്:</b> '+esc(st.ref)+'</p><div class="row"><button class="btn gold" data-act="next">അടുത്തത് ›</button></div>';
+}
+function scoreDone(st){
+  var q=S.q,t=TEAM(),base=st.pts||10;
+  q.result=(q.helped||q.mistakes)?'helped':'first';
+  q.gain=q.result==='first'?base:Math.round(base/2);
+  t.score+=q.gain;t.stat[q.result==='first'?'first':'helped']++;
+  renderBoard();
+}
+
+function playerHTML(scenes){
+  return '<div class="player" id="player"><div class="pv"><div class="art"></div><p class="cap" aria-live="polite"></p></div><div class="segs">'+scenes.map(function(){return '<div class="seg"><i></i></div>'}).join('')+'</div><div class="ctl"><button class="btn" data-p="prev">‹ മുമ്പത്തേത്</button><button class="btn" data-p="play">നിർത്തുക</button><button class="btn" data-p="next">അടുത്തത് ›</button><button class="btn" data-p="re">വീണ്ടും തുടങ്ങാം</button></div></div>';
+}
+function mountPlayer(scenes){
+  var root=$('#player');if(!root)return;
+  var cap=root.querySelector('.cap'),art=root.querySelector('.art'),segs=[].slice.call(root.querySelectorAll('.seg i')),bp=root.querySelector('[data-p="play"]');
+  var i=0,playing=true,ended=false,tmr=null,t0=0,rem=0;
+  var dur=function(n){return Math.max(4500,scenes[n].t.length*85)};
+  function frac(){return Math.min(1,Math.max(0,1-rem/dur(i)))}
+  function run(){
+    clearTimeout(tmr);
+    var s=segs[i];s.style.transition='none';s.style.width=(frac()*100)+'%';void s.offsetWidth;
+    s.style.transition='width '+rem+'ms linear';s.style.width='100%';
+    t0=Date.now();tmr=setTimeout(nextScene,rem);
+  }
+  function show(n){
+    i=n;ended=false;
+    cap.textContent=scenes[n].t;cap.classList.remove('in');void cap.offsetWidth;cap.classList.add('in');
+    art.innerHTML=svg(scenes[n].a);
+    segs.forEach(function(s,k){s.style.transition='none';s.style.width=k<n?'100%':'0%'});
+    rem=dur(n);
+    if(playing){run();bp.textContent='നിർത്തുക'}else{bp.textContent='കാണുക'}
+  }
+  function nextScene(){
+    if(i<scenes.length-1){show(i+1)}
+    else{playing=false;ended=true;clearTimeout(tmr);segs[i].style.width='100%';bp.textContent='വീണ്ടും കാണാം'}
+  }
+  root.addEventListener('click',function(e){
+    var b=e.target.closest('[data-p]');if(!b)return;
+    var a=b.dataset.p;
+    if(a==='prev'){show(Math.max(0,i-1))}
+    else if(a==='next'){clearTimeout(tmr);if(i<scenes.length-1){show(i+1)}else{nextScene()}}
+    else if(a==='re'){playing=true;show(0)}
+    else if(a==='play'){
+      if(ended){playing=true;show(0);return}
+      if(playing){playing=false;rem-=Date.now()-t0;clearTimeout(tmr);var s=segs[i];var f=frac();s.style.transition='none';s.style.width=(f*100)+'%';bp.textContent='കാണുക'}
+      else{playing=true;bp.textContent='നിർത്തുക';run()}
+    }
+  });
+  onClean(function(){clearTimeout(tmr)});
+  show(0);
+}
+
+function rVideo(st){
+  stage.innerHTML=head()+'<p class="q">'+esc(st.title)+'</p>'+playerHTML(st.scenes)+(st.note?'<p class="note">'+esc(st.note)+'</p>':'')+'<div class="row"><button class="btn gold" data-act="next">കണ്ടു കഴിഞ്ഞു, തുടരാം ›</button></div>';
+  mountPlayer(st.scenes);
+}
+function rInfo(st){
+  stage.innerHTML=head()+'<p class="q">'+esc(st.title)+'</p><div class="pgbig" style="text-align:left;padding:22px 24px"><p class="q" style="margin:0;font-family:var(--font-display);font-weight:600">'+esc(st.body)+'</p></div>'+(st.note?'<p class="note">'+esc(st.note)+'</p>':'')+'<div class="row"><button class="btn gold" data-act="next">തുടരാം ›</button></div>';
+}
+function rGate(st){
+  var c=S.group[st.group]||0,tot=LV().steps.filter(function(s){return s.group===st.group}).length;
+  var pass=c>=st.need;
+  stage.innerHTML=head()+'<p class="q">'+tot+' ചോദ്യങ്ങളിൽ '+c+' എണ്ണം ശരി.</p>'+(pass
+    ?'<div class="msg good"><b>കപ്പൽ മുന്നോട്ട്!</b> ആവശ്യമുള്ള '+st.need+' ശരിയുത്തരങ്ങൾ ലഭിച്ചു.</div><div class="row"><button class="btn gold" data-act="next">അടുത്ത ലെവലിലേക്ക് ›</button></div>'
+    :'<div class="msg warn"><b>ഇനി ഒരിക്കൽക്കൂടി ശ്രദ്ധിച്ച് കാണാം.</b> മുന്നോട്ടുപോകാൻ കുറഞ്ഞത് '+st.need+' ശരിയുത്തരം വേണം.</div><div class="row"><button class="btn gold" data-act="regate">വീഡിയോ വീണ്ടും കാണാം</button><button class="btn ghost" data-act="next">അധ്യാപകർക്ക്: അടുത്തതിലേക്ക്</button></div>');
+}
+
+function fmt(s){var m=Math.floor(s/60),r=s%60;return m+':'+(r<10?'0':'')+r}
+function rTasks(st){
+  var q=S.q,h=head();
+  st.tasks.forEach(function(t,ti){
+    h+='<div class="tk"><h3>'+esc(t.h)+'</h3><p class="d">'+esc(t.d)+'</p><div class="tkrow">'+(t.p?'<span class="chip pg">പേജ് '+esc(t.p)+'</span>':'');
+    if(t.sec){h+='<span class="tm-t" id="tm'+ti+'">'+fmt(t.sec)+'</span><button class="btn sm" data-act="tstart" data-i="'+ti+'" id="tb'+ti+'">സമയം തുടങ്ങാം</button>'}
+    h+='</div>';
+    if(t.max){
+      h+='<div class="aw">'+S.teams.map(function(tm,j){var v=(q.aw[ti+'_'+j]||0);return '<span class="a">'+esc(tm.name)+'<button class="btn sm" data-act="aw" data-t="'+ti+'" data-j="'+j+'" data-d="-10" aria-label="കുറയ്ക്കുക">−</button><b id="aw'+ti+'_'+j+'">'+v+'</b><button class="btn sm" data-act="aw" data-t="'+ti+'" data-j="'+j+'" data-d="10" aria-label="കൂട്ടുക">+</button></span>'}).join('')+'</div>';
+    }
+    h+='</div>';
+  });
+  h+='<p class="note">അധ്യാപകർ ഓരോ ടീമിനും പോയിന്റ് നൽകുക (+10 വീതം). എല്ലാം കഴിഞ്ഞശേഷം തുടരാം.</p><div class="row"><button class="btn gold" data-act="tdone">പോയിന്റ് ചേർത്ത് തുടരാം ›</button></div>';
+  stage.innerHTML=h;
+}
+
+function renderHelp(){
+  var L=LV(),st=ST(),page=st.page||L.page,scenes=st.scenes||L.scenes,where=st.where||L.where;
+  var h=head();
+  if(S.help==='choose'){
+    h+='<p class="q">ഏതു രീതിയിൽ സഹായം വേണം?</p><div class="help">';
+    if(scenes)h+='<button class="btn gold" data-act="hv">വീഡിയോ കാണാം</button>';
+    if(page)h+='<button class="btn gold" data-act="hp">പാഠപുസ്തകം പേജ് '+esc(page)+' നോക്കാം</button>';
+    h+='</div><div class="row"><button class="btn ghost" data-act="hback">തിരിച്ചു ചോദ്യത്തിലേക്ക്</button></div>';
+  }else if(S.help==='video'){
+    h+='<p class="q">ഈ ഭാഗം ശ്രദ്ധിച്ച് കാണൂ</p>'+playerHTML(scenes)+'<div class="row"><button class="btn gold" data-act="hdone">ഇനി ഉത്തരം പറയാം ›</button></div>';
+  }else{
+    h+='<p class="q">പാഠപുസ്തകം തുറന്ന് വായിക്കൂ</p><div class="pgbig"><p>പാഠപുസ്തകം</p><p class="no">പേജ് '+esc(page)+'</p>'+(where?'<p>'+esc(where)+' വായിക്കൂ.</p>':'')+'</div><div class="row"><button class="btn gold" data-act="hdone">വായിച്ചു, ഉത്തരം പറയാം ›</button></div>';
+  }
+  stage.innerHTML=h;
+  if(S.help==='video')mountPlayer(scenes);
+}
+
+/* ---------- setup / end ---------- */
+function renderSetup(){
+  var h='<div class="setup"><div class="lh"><h2>യാത്ര തുടങ്ങാം</h2></div><p class="lead">അറേബ്യയിൽനിന്ന് മാല്യങ്കരയിലേക്ക് (കൊടുങ്ങല്ലൂർ) ഒരു കപ്പൽയാത്ര. ശരിയുത്തരം പറയുന്തോറും കപ്പൽ മുന്നോട്ടു നീങ്ങും. ക്ലാസ്സിനെ ടീമുകളായി തിരിക്കൂ.</p><p style="font-weight:600">എത്ര ടീമുകൾ?</p><div class="cnt">';
+  [1,2,3,4,5,6].forEach(function(n){h+='<button data-act="cnt" data-i="'+n+'" class="'+(S.n===n?'on':'')+'" aria-pressed="'+(S.n===n)+'">'+n+'</button>'});
+  h+='</div><div class="names">';
+  for(var i=0;i<S.n;i++){h+='<label for="tn'+i+'">ടീം '+(i+1)+'<input id="tn'+i+'" maxlength="20" value="'+esc(S._names&&S._names[i]?S._names[i]:'ടീം '+(i+1))+'" autocomplete="off"></label>'}
+  h+='</div><div class="how"><b>എങ്ങനെ കളിക്കാം:</b><br>• ടീമുകൾ മാറിമാറി ചോദ്യത്തിന് ഉത്തരം പറയും. ആദ്യശ്രമത്തിൽ ശരി: 10 പോയിന്റ്.<br>• ഉത്തരം അറിയില്ലെങ്കിൽ “സഹായം” അമർത്തി വീഡിയോ കാണുകയോ പാഠപുസ്തകത്തിലെ പേജ് നോക്കുകയോ ചെയ്യാം. സഹായത്തിനുശേഷം ശരി പറഞ്ഞാൽ 5 പോയിന്റ്.<br>• ഇടയ്ക്ക് കലാ ലെവൽ, കവിത, ക്ലാസ്സ്മുറി പ്രവർത്തനങ്ങൾ എന്നിവ വരും.<br>• അവസാനം ധീരത, ജിജ്ഞാസ, വിശ്വാസം എന്നീ ബാഡ്ജുകൾ.</div><div class="row"><button class="btn gold" data-act="start">യാത്ര തുടങ്ങുക ›</button></div></div>';
+  stage.innerHTML=h;
+}
+function readNames(){
+  var a=[];for(var i=0;i<S.n;i++){var el=document.getElementById('tn'+i);a.push(el&&el.value.trim()?el.value.trim():'ടീം '+(i+1))}return a;
+}
+function renderEnd(){
+  var T=S.teams.slice().sort(function(a,b){return b.score-a.score}),top=T[0].score;
+  var h='<div class="lh"><h2>യാത്ര പൂർത്തിയായി</h2><span class="chip">എല്ലാ ലെവലും കഴിഞ്ഞു</span></div><p class="q">കപ്പൽ മാല്യങ്കര തീരത്ത് എത്തി. അഭിനന്ദനങ്ങൾ!</p><div class="rank">';
+  T.forEach(function(t,i){h+='<div class="rk'+(t.score===top?' first':'')+'"><span class="p">'+(i+1)+'</span><span class="n">'+esc(t.name)+'</span><span class="s">'+t.score+'</span></div>'});
+  h+='</div><div class="bd">';
+  [{k:'വിശ്വാസം',e:'ഏറ്റവും കൂടുതൽ പോയിന്റ്',f:function(t){return t.score}},
+   {k:'ധീരത',e:'ആദ്യശ്രമത്തിൽ ഏറ്റവും കൂടുതൽ ശരിയുത്തരം',f:function(t){return t.stat.first}},
+   {k:'ജിജ്ഞാസ',e:'സഹായം എടുത്ത് പഠിച്ച് ശരിയാക്കിയ ഉത്തരങ്ങൾ',f:function(t){return t.stat.helped}}].forEach(function(b){
+    var m=Math.max.apply(null,S.teams.map(b.f));
+    var w=m>0?S.teams.filter(function(t){return b.f(t)===m}).map(function(t){return t.name}).join(', '):'ആരുമില്ല';
+    h+='<div class="b"><h3>'+b.k+' ബാഡ്ജ്</h3><p class="w">'+esc(w)+'</p><p class="e">'+b.e+'</p></div>';
+  });
+  h+='</div><div class="row"><button class="btn gold" data-act="restart">വീണ്ടും കളിക്കാം</button></div>';
+  stage.innerHTML=h;
+}
+
+/* ---------- flow ---------- */
+function advance(){
+  S.step++;
+  if(S.step>=LV().steps.length){S.lvl++;S.step=0;if(S.lvl>=LEVELS.length){S.phase='end';render();window.scrollTo(0,0);return}}
+  S.q=initQ();S.mode='play';S.help='choose';
+  render();
+  stage.scrollIntoView({block:'start',behavior:'smooth'});
+}
+
+var ACT={
+  cnt:function(b){S._names=readNames();S.n=+b.dataset.i;render()},
+  start:function(){
+    var names=readNames();
+    S.teams=names.map(function(n){return {name:n,score:0,stat:{first:0,helped:0,miss:0}}});
+    S.phase='game';S.turn=0;S.lvl=0;S.step=0;S.group={};S.mode='play';S.help='choose';S.q=initQ();render();
+  },
+  opt:function(b){
+    var st=ST(),q=S.q;if(q.result)return;
+    var i=+b.dataset.i;q.picked=i;
+    var ok=q.opts[i]===st.opts[0],t=TEAM();
+    if(ok){
+      q.result=q.helped?'helped':'first';var base=st.pts||10;q.gain=q.helped?Math.round(base/2):base;
+      t.score+=q.gain;t.stat[q.helped?'helped':'first']++;
+      if(st.group)S.group[st.group]=(S.group[st.group]||0)+1;
+    }else if(q.helped){q.result='miss';q.gain=0;t.stat.miss++}
+    else{q.result='wrong1'}
+    render();
+  },
+  help:function(){S.mode='help';S.help=(LV().page&&LV().scenes)?'choose':(LV().scenes?'video':'page');render()},
+  hv:function(){S.help='video';render()},
+  hp:function(){S.help='page';render()},
+  hback:function(){S.mode='play';render()},
+  hdone:function(){
+    var st=ST(),q=S.q;q.helped=true;S.mode='play';S.help='choose';
+    if(st.type==='mcq'){q.result=null;q.picked=null;q.opts=shuffle(st.opts)}
+    render();
+  },
+  next:function(){var st=ST();if(isQ(st.type))S.turn++;advance()},
+  regate:function(){var st=ST();S.group[st.group]=0;S.step=st.back;S.q=initQ();render()},
+  ml:function(b){var q=S.q;q.selL=+b.dataset.i;render()},
+  mr:function(b){
+    var st=ST(),q=S.q;if(q.selL===null)return;
+    var ri=+b.dataset.i,wrong=false;
+    if(ri===q.selL){q.done[q.selL]=ri;q.selL=null;if(Object.keys(q.done).length===st.pairs.length)scoreDone(st)}
+    else{q.mistakes++;wrong=true}
+    render();
+    if(wrong){var s=stage.querySelector('.mt');if(s)s.classList.add('shake')}
+  },
+  od:function(b){
+    var st=ST(),q=S.q,ii=+b.dataset.i;
+    if(ii===q.seq.length){q.seq.push(ii);if(q.seq.length===st.items.length)scoreDone(st);render()}
+    else{q.mistakes++;render();var o=stage.querySelector('.ord');if(o){o.classList.add('shake')}}
+  },
+  tstart:function(b){
+    var st=ST(),i=+b.dataset.i,t=st.tasks[i],el=document.getElementById('tm'+i);
+    if(b._iv){clearInterval(b._iv);b._iv=null;b.textContent='സമയം തുടങ്ങാം';el.textContent=fmt(t.sec);return}
+    var left=t.sec;b.textContent='നിർത്തി പുനഃക്രമീകരിക്കുക';
+    b._iv=setInterval(function(){
+      left--;el.textContent=fmt(Math.max(left,0));
+      if(left<=0){clearInterval(b._iv);b._iv=null;b.textContent='സമയം കഴിഞ്ഞു! വീണ്ടും തുടങ്ങാം';el.style.color='var(--bad)'}
+    },1000);
+    onClean(function(){if(b._iv)clearInterval(b._iv)});
+  },
+  aw:function(b){
+    var st=ST(),q=S.q,t=+b.dataset.t,j=+b.dataset.j,d=+b.dataset.d,max=st.tasks[t].max,k=t+'_'+j;
+    var v=Math.min(max,Math.max(0,(q.aw[k]||0)+d));q.aw[k]=v;
+    document.getElementById('aw'+t+'_'+j).textContent=v;
+  },
+  tdone:function(){
+    var q=S.q;Object.keys(q.aw).forEach(function(k){var j=+k.split('_')[1];S.teams[j].score+=q.aw[k]});
+    advance();
+  },
+  restart:function(){S.phase='setup';S.group={};render();window.scrollTo(0,0)}
+};
+stage.addEventListener('click',function(e){
+  var b=e.target.closest('[data-act]');if(!b||b.disabled)return;
+  var f=ACT[b.dataset.act];if(f)f(b);
+});
+render();
+})();
+</script>
+
+</body></html>
